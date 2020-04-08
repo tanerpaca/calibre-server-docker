@@ -1,6 +1,7 @@
-FROM ubuntu:17.10
-MAINTAINER santi@regueiro.es
+FROM ubuntu:18.04
+MAINTAINER tanerpaca@gmail.com
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y \
   && apt-get install -y calibre \
   && apt-get clean \
