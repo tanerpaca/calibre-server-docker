@@ -12,4 +12,4 @@ EXPOSE 8080
 RUN mkdir /opt/calibre && mkdir /opt/calibre/library
 
 VOLUME        ["/opt/calibre/library"]
-ENTRYPOINT    ["/usr/bin/calibre-server", "--enable-local-write", "/opt/calibre/library"]
+ENTRYPOINT    ["/usr/bin/calibre-server", "--userdb", "/opt/calibre/library/users.sqlite", "--enable-auth", "/opt/calibre/library"]
